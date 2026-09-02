@@ -11,8 +11,8 @@ app = FastAPI(title="BillFlow API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, specify the exact domains
-    allow_credentials=True,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=False, # Must be False if origins is ["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
